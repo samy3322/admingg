@@ -25,13 +25,7 @@ export default class Left extends Component {
     valid()        
      {   
         console.log(this.state)
-        
-        
-<<<<<<< Updated upstream
         fetch('http://127.0.0.1:8000/api/adminlogin',
-=======
-        fetch('http://127.0.0.1:8000/api/login',
->>>>>>> Stashed changes
         {
         method:'post',
         
@@ -45,15 +39,11 @@ export default class Left extends Component {
             }).then(data=>{
                 this.setState({valid:data})
                 console.log(data)
-               
-                if(this.state.valid.error===true )
-                { ( document.location.href="Main")}
             })
-<<<<<<< Updated upstream
-           if(this.setState===1){   ( document.location.href="Main") } 
-=======
-          
->>>>>>> Stashed changes
+       
+
+            if(this.state.valid===1)
+            { ( document.location.href="Main") } 
             
 
     }
