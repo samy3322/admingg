@@ -8,7 +8,7 @@ import Menu from "./Menu"
     const[password,setPassword]=useState("") 
     const history=useHistory();
 */
-const res=res;
+
 
 export default class Left extends Component {
 
