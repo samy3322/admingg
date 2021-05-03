@@ -8,8 +8,10 @@ import Menu from "./Menu"
     const[password,setPassword]=useState("") 
     const history=useHistory();
 */
+const res=res;
+
 export default class Left extends Component {
- 
+
   constructor()
     {
         super();
@@ -25,7 +27,11 @@ export default class Left extends Component {
         console.log(this.state)
         
         
+<<<<<<< Updated upstream
         fetch('http://127.0.0.1:8000/api/adminlogin',
+=======
+        fetch('http://127.0.0.1:8000/api/login',
+>>>>>>> Stashed changes
         {
         method:'post',
         
@@ -40,8 +46,14 @@ export default class Left extends Component {
                 this.setState({valid:data})
                 console.log(data)
                
+                if(this.state.valid.error===true )
+                { ( document.location.href="Main")}
             })
+<<<<<<< Updated upstream
            if(this.setState===1){   ( document.location.href="Main") } 
+=======
+          
+>>>>>>> Stashed changes
             
 
     }
