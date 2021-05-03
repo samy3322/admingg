@@ -167,7 +167,7 @@ return(
 
     {after && <div style={{ marginTop: 20, lineHeight: '25px' }}>
       <b>Selected Option</b><br />
-      <div style={{ marginTop: 10 }}> {after.label}</div>
+      <div style={{ marginTop: 10 }}> {after.label}</div> 
   
     </div>}
     </div>
