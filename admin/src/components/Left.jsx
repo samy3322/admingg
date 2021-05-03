@@ -41,7 +41,8 @@ export default class Left extends Component {
                 console.log(data)
                
             })
-           if(this.setState===1){   ( document.location.href="Main") } 
+            if(this.state.valid===1)
+            { ( document.location.href="Main") } 
             
 
     }
