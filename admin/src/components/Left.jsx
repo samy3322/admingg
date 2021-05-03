@@ -24,7 +24,8 @@ export default class Left extends Component {
      {   
         console.log(this.state)
         
-        fetch('http://127.0.0.1:8000/api/login',
+        
+        fetch('http://127.0.0.1:8000/api/adminlogin',
         {
         method:'post',
         
@@ -40,7 +41,7 @@ export default class Left extends Component {
                 console.log(data)
                
             })
-           {this.state.valid.error===true &&  ( document.location.href="Main") } 
+           if(this.setState===1){   ( document.location.href="Main") } 
             
 
     }
