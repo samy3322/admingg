@@ -84,7 +84,7 @@ style={{width:"70%"}}/>
 
 <Button variant="dark" onClick={()=>this.valid()}>Login </Button>
 <div>
-{this.state.valid===0 &&<p>email or password is incorrect </p> } 
+{this.state.valid===0 &&<p>Username or password is incorrect </p> } 
 </div>
 </Form>
 
