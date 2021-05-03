@@ -162,12 +162,12 @@ return(
       placeholder="Select Option"
       value={after} // set selected value
       options={data} // set list of the data
-      onChange={handleChange} // assign onChange function 170
+      onChange={handleChange} // assign onChange function 
     />after
 
     {after && <div style={{ marginTop: 20, lineHeight: '25px' }}>
       <b>Selected Option</b><br />
-      <div style={{ marginTop: 10 }}> {after.label}</div> 
+      <div style={{ marginTop: 10 }}> </div> 
   
     </div>}
     </div>
