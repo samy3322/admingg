@@ -16,7 +16,7 @@ async function Job()
 {
     let item={Jobs};
     console.warn(item)
-    let result=await fetch("http://127.0.0.1:8000/api/CourseAdd",
+    let result=await fetch("http://127.0.0.1:8000/api/JobTypeAdd",
     {
         method:'POST',
         body:JSON.stringify(item),
