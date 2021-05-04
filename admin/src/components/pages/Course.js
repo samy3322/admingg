@@ -121,8 +121,8 @@ async function regi()
 {  if (formValidation())
     {
       let item={course,stream,after,duration,type,about,exam_type,eligibility,recuritement,jobs}
-    console.warn(item)
-    let result=await fetch("http://127.0.0.1:8000/api/CourseAdd",{
+    console.log(item)
+   let result=await fetch("http://127.0.0.1:8000/api/CourseAdd",{
         method:'POST',
         body:JSON.stringify(item),
             headers:{
