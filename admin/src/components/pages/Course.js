@@ -61,7 +61,7 @@ function Course()
   };
   const handleChange = e =>
   {
-    setAfter(e);
+    setAfter(e.value);
   }
     const formValidation = () => 
   {
@@ -161,7 +161,7 @@ return(
         <div>
    course can be done after <Select className="viper"
       placeholder="Select Option"
-      value={after} // set selected value
+      //value={after} // set selected value
       options={data} // set list of the data
       onChange={handleChange} // assign onChange function 
     />after
