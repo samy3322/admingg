@@ -16,9 +16,6 @@ function Course()
     const[eligibility,setEligibility]=useState("");
     const[recuritement,setRecuritement]=useState("");
     const[jobs,setJobs]=useState("");
-    const[fees,setFees]=useState("");
-    
-    
     const[selectfile,setSelectfile]=useState("");
     const[pdfFile,setPdfFile]=useState("");
     const[pdfFileError,setPdfFileError]=useState("");
@@ -62,55 +59,59 @@ function Course()
       color:"red",
       
   };
-  const handleChange = e => {
+  const handleChange = e =>
+  {
     setAfter(e);
   }
-
-
- 
- 
-    const formValidation = () => {
-     
-        if (document.getElementsByName('course')[0].value === '') {
+    const formValidation = () => 
+  {
+        if (document.getElementsByName('course')[0].value === '') 
+        {
             alert('Enter course');
             return false;
         }
-        if (document.getElementsByName('stream')[0].value === '') {
-          alert('Enter location ');
+        if (document.getElementsByName('stream')[0].value === '') 
+        {
+          alert('Enter Stream ');
           return false;
-        }
-    
-      
-        if (document.getElementsByName('duration')[0].value === '') {
-          alert('Enter contact no');
+        } 
+        if (document.getElementsByName('duration')[0].value === '') 
+        {
+          alert('Enter Duration');
           return false;
       }
-      if (document.getElementsByName('type')[0].value === '') {
-        alert('Enter email id ');
+      if (document.getElementsByName('type')[0].value === '')
+       {
+        alert('Enter Course Type');
         return false;
       }
   
-      if (document.getElementsByName('about')[0].value === '') {
-        alert('Enter about');
+      if (document.getElementsByName('about')[0].value === '') 
+      {
+        alert('Enter about Course');
         return false;
       }
-      if (document.getElementsByName('exam_type')[0].value === '') {
-        alert('Enter academic');
+      if (document.getElementsByName('exam_type')[0].value === '')
+       {
+        alert('Enter Exam type');
         return false;
     }
-    if (document.getElementsByName('eligibility')[0].value === '') {
-      alert('Enter accomadation ');
+    if (document.getElementsByName('eligibility')[0].value === '')
+     {
+      alert('Enter Eligibility criteria ');
       return false;
     }
 
-    if (document.getElementsByName('recuritement')[0].value === '') {
-      alert('Enter email');
+    if (document.getElementsByName('recuritement')[0].value === '') 
+    {
+      alert('Enter Recruitment');
       return false;
     }
-    if (document.getElementsByName('jobs')[0].value === '') {
-      alert('Enter name');
+    if (document.getElementsByName('jobs')[0].value === '')
+   {
+      alert('Enter Jobs');
       return false;
-  }
+   }
  
  
 
@@ -119,7 +120,7 @@ return true;
 async function regi()
 {  if (formValidation())
     {
-      let item={course,stream,after,duration,type,about,exam_type,eligibility,recuritement,jobs,fees}
+      let item={course,stream,after,duration,type,about,exam_type,eligibility,recuritement,jobs}
     console.warn(item)
     let result=await fetch("http://127.0.0.1:8000/api/CourseAdd",{
         method:'POST',
@@ -173,8 +174,8 @@ return(
     </div>
 
     <div className="form-group"> <label htmlFor='duration'>duration</label> <input  className="form-control form-control-lg" type="text" name="duration"  value={duration} placeholder="duration" onChange={(e)=>setDuration(e.target.value)} /><br/></div>
-    <div className="form-group">  <input   className="form-control form-control-lg" type="text" name="type"  value={type} placeholder="type of course"onChange={(e)=>setType(e.target.value)}/></div>
-    <div className="form-group"><textarea   className="form-control form-control-lg" type="text"  name="about" value={about}   placeholder="about the course"  onChange={(e)=>setAbout(e.target.value)}/><br/></div>
+    <div className="form-group">  <input  className="form-control form-control-lg" type="text" name="type"  value={type} placeholder="type of course"onChange={(e)=>setType(e.target.value)}/></div>
+    <div className="form-group"><textarea  className="form-control form-control-lg" type="text"  name="about" value={about}   placeholder="about the course"  onChange={(e)=>setAbout(e.target.value)}/><br/></div>
     <div className="form-group"><input className="form-control form-control-lg" type="text"  name="exam_type" value={exam_type}   placeholder="type of exam for course"  onChange={(e)=>setExam_type(e.target.value)}/><br/></div>
     <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="eligibility" value={eligibility}   placeholder="academics "  onChange={(e)=>setEligibility(e.target.value)}/><br/></div>
     <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="recuritement" value={recuritement}   placeholder="recuruitement"  onChange={(e)=>setRecuritement(e.target.value)}/><br/></div>
