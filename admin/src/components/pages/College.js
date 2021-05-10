@@ -33,11 +33,11 @@ function College()
     const history=useHistory();
     const data = [
       {
-        value: 0,
+        value: 1,
         label: "yes"
       },
       {
-        value: 1,
+        value: 0,
         label: "no"
       }];
        const handleChange = e => {
