@@ -20,7 +20,6 @@ function College()
     const[average,setAverage]=useState("");
     const[affiliated_to,setAffiliated_to]=useState("");
     const[certficate,setCertficate]=useState("");
-    const[college_status,setCollege_status]=useState("");
 
     const [cno1Error, setCno1Error] = useState({})
 
@@ -172,11 +171,6 @@ if (document.getElementsByName('certficate')[0].value === '') {
   alert('Enter Certificate ');
   return false;
 }
-
-if (document.getElementsByName('college_status')[0].value === '') {
-  alert('Enter College Status');
-  return false;
-}
 return true;
 };
 async function regi()
@@ -184,7 +178,7 @@ async function regi()
     {
       if(formValidation1())
     {
-       let item={c_name,clocation,caddress,cno1,cno2,cemail_id,about,academic,accommodation,faculty,placement,average,affiliated_to,college_status,}
+       let item={c_name,clocation,caddress,cno1,cno2,cemail_id,about,academic,accommodation,faculty,placement,average,affiliated_to,}
     console.warn(item)
     let result=await fetch("http://127.0.0.1:8000/api/clgadd",{
         method:'post',
@@ -251,7 +245,7 @@ return(
          <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="average" value={average}   placeholder="AVERAGE GRADE"  onChange={(e)=>setAverage(e.target.value)}/><br/>
          {Object.keys(averageError).map((key)=>{return <div style={{color :"red"}}>{averageError[key]}</div>})}</div>
          <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="affiliated_to" value={affiliated_to}   placeholder=" ENTER THE Affiliated Field "  onChange={(e)=>setAffiliated_to(e.target.value)}/><br/></div>
-         <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="college_status" value={college_status}   placeholder=" ENTER THE COLLEGE status"  onChange={(e)=>setCollege_status(e.target.value)}/><br/></div>
+         
         
          <div className="form-group">upload verfied certficate of college<input type="file" className="form-control form-control-lg"   name="certficate" value={certficate}   placeholder="select the certficate"  onChange={(e)=>setCertficate(e.target.value)}/><br/></div>
          {pdfFileError&&<div className='form-control form-control-lg'>{pdfFileError}</div>}
