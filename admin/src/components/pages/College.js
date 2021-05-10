@@ -16,7 +16,6 @@ function College()
     const[academic,setAcademic]=useState("");
     const[accommodation,setAccommodation]=useState("");
     const[faculty,setFaculty]=useState("");
-    const[infrastructure,setInfrastructure]=useState("");
     const[placement,setPlacement]=useState("null");
     const[average,setAverage]=useState("");
     const[affiliated_to,setAffiliated_to]=useState("");
@@ -42,7 +41,7 @@ function College()
         label: "no"
       }];
        const handleChange = e => {
-        setPlacement(e);
+        setPlacement(e.value);
       }
      
     const styles = {
@@ -187,7 +186,7 @@ async function regi()
     {
        let item={c_name,clocation,caddress,cno1,cno2,cemail_id,about,academic,accommodation,faculty,placement,average,affiliated_to,college_status,}
     console.warn(item)
-    let result=await fetch("http://127.0.0.1:8000/api/collegeadd",{
+    let result=await fetch("http://127.0.0.1:8000/api/clgadd",{
         method:'post',
         body:JSON.stringify(item),
             headers:{
