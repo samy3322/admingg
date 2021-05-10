@@ -1,4 +1,4 @@
-import './card-style.css';
+//import './card-style.css';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -75,9 +75,13 @@ return(
         
     );
   })}
-    </div>    
+    <div>
+            <button href="Course">ADD COURSE</button>
+        </div> 
+    </div>   
+     
 );     
         
-    }
+}
 
 export default View;

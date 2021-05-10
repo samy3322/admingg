@@ -13,7 +13,7 @@ export const Sidebar = [
   },
   {
     title: 'Course',
-    path: '/Course',
+    path: '/View',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },

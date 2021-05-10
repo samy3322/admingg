@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import College from './pages/College';
 import Products from './pages/Products';
 import Course from './pages/Course';
-import Jobtype from './pages/Jobtype'
+import Jobtype from './pages/Jobtype';
+import View from './pages/View';
 
 
 function Main(){ 
@@ -22,6 +23,7 @@ function Main(){
           <Route path='/products' component={Products} />
           <Route path='/Course' component={Course} />
           <Route path='/Jobtype' component={Jobtype} />
+          <Route path='/View' component={View} />
         </Switch>
       </Router>
  
