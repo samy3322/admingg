@@ -22,10 +22,8 @@ function College()
     const[affiliated_to,setAffiliated_to]=useState("");
     const[certficate,setCertficate]=useState("");
     const[college_status,setCollege_status]=useState("");
-    const[cpassword,setCpassword]=useState("");
 
     const [cno1Error, setCno1Error] = useState({})
-    const [cpasswordError,setCpasswordError] = useState({})
 
     const [cemail_idError, setCemail_idError] = useState({})
     const [averageError, setAverageError] = useState({})
@@ -91,7 +89,6 @@ const onSubmit=(e)=>
 }
 const formValidation1=()=>{
   const cno1Error={};
-  const cpasswordError={};
   let isValid = true;
 
 if(cno1.trim().length < 10)
@@ -104,11 +101,6 @@ if(cno1.trim().length > 10)
   cno1Error.cno1long="number should not be greater than 10";
   isValid = false;
 }
-if(cpassword.trim().length < 8)
-{
-  cpasswordError.cpasswordshort="password is short is short";
-  isValid = false;
-}
 if(!cemail_id.includes(".com"))
 {
   cemail_idError.cemail_idinclude="email is invalid";
@@ -118,7 +110,6 @@ if(!cemail_id.includes(".com"))
 setAverageError(averageError);
 setCemail_idError(cemail_idError);
 setCno1Error(cno1Error);
-setCpasswordError(cpasswordError);
 return isValid;
 }
   const fileSelectedHandler=  event =>
@@ -206,7 +197,7 @@ async function regi()
     })
     result= await result.json()
  
-    alert("Course Added"); 
+    alert("College Added"); 
    
 }
     }
