@@ -56,22 +56,22 @@ function College()
   
  
   
-/*const fileType=['application/pdf'];
+const fileType=['application/pdf'];
 const handlepdf=(e)=>{
   let selectedpdf=e.target.files[0];
-  if(selectedpdf)
+  /*if(selectedpdf)
   {
     if(selectedpdf&&fileType.includes(selectedpdf.type))
-    {
+    {*/
       let reader = new FileReader();
       reader.readAsDataURL(selectedpdf);
       reader.onloadend = (e) =>{
         setPdfFile(e.target.result);
         setPdfFileError('');
-    }
+ }
 
   }
-  else{
+ /* else{
     setPdfFile(null);
     setPdfFileError('Please select valid pdf file');
   }
@@ -79,9 +79,9 @@ const handlepdf=(e)=>{
 else{
   console.log('select your file');
 }
-}
+}*/
 
-*/
+
 const onSubmit=(e)=>
 {
   e.preventDefault();
