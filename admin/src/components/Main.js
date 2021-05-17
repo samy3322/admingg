@@ -15,15 +15,15 @@ function Main(){
 <Router>
         <Navbar />
         <Switch>
-          <Redirect exact from="/" to="/Home" />
-          <Route path="/home">
+          
+          <Route exact path="/home">
           <Home />
           </Route>
-          <Route path='/College' component={College} />
-          <Route path='/products' component={Products} />
-          <Route path='/Course' component={Course} />
-          <Route path='/Jobtype' component={Jobtype} />
-          <Route path='/View' component={View} />
+          <Route exact path='/College' component={College} />
+          <Route exact path='/products' component={Products} />
+          <Route exact path='/Course' component={Course} />
+          <Route exact path='/Jobtype' component={Jobtype} />
+          <Route exact path='/View' component={View} />
         </Switch>
       </Router>
  
