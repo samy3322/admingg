@@ -12,7 +12,7 @@ function College()
     const[cno1,setCno1]=useState("");
     const[cno2,setCno2]=useState("");
     const[cemail_id,setCemail_id]=useState("");
-    const[about,setAbout]=useState("");
+    const[about,setabout]=useState("");
     const[academic,setAcademic]=useState("");
     const[accommodation,setAccommodation]=useState("");
     const[faculty,setFaculty]=useState("");
@@ -25,7 +25,7 @@ function College()
 
     const [cemail_idError, setCemail_idError] = useState({})
     const [averageError, setAverageError] = useState({})
-    const[selectfile,setSelectfile]=useState("");
+   const[selectfile,setSelectfile]=useState("");
     const[pdfFile,setPdfFile]=useState("");
     const[pdfFileError,setPdfFileError]=useState("");
    
@@ -66,7 +66,7 @@ const handlepdf=(e)=>{
       let reader = new FileReader();
       reader.readAsDataURL(selectedpdf);
       reader.onloadend = (e) =>{
-        setPdfFile(e.target.result);
+        setPdfFile(e.target.files[0]);
         setPdfFileError('');
  }
 
@@ -169,20 +169,21 @@ return isValid;
     alert('Enter Affiliated details');
     return false;
 }
-if (document.getElementsByName('certificate')[0].value === '') {
-  alert('Enter Certificate ');
-  return false;
-}
+
 return true;
 };
 async function regi()
-{  if (formValidation())
+{ 
+  
+  
+  
+  if (formValidation())
     {
       if(formValidation1())
     {
        let item={c_name,clocation,caddress,cno1,cno2,cemail_id,about,academic,accommodation,faculty,placement,average,affiliated_to,certificate}
-    console.warn(item)
-    let result=await fetch("http://127.0.0.1:8000/api/clgadd",{
+    console.warn(item); 
+    let result=await fetch("http://127.0.0.1:8000/api/collegeadd",{
         method:'post',
         body:JSON.stringify(item),
             headers:{
@@ -191,7 +192,7 @@ async function regi()
 }
     })
     result= await result.json()
- 
+    console.warn("result",result)
     alert("College Added"); 
    
 }
@@ -223,7 +224,7 @@ return(
          <div className="form-group">  <input   className="form-control form-control-lg" type="text" name="cno2"  value={cno2} placeholder="ENTER ANOTHER CONTACT NUMBER"onChange={(e)=>setCno2(e.target.value)}/></div>
          <div className="form-group"> <label htmlFor='email'>Email</label><input  className="form-control form-control-lg" type="email"  name="cemail_id" value={cemail_id}   placeholder=" ENTER THE EMAIL ID"  onChange={(e)=>setCemail_id(e.target.value)}/><br/>
          {Object.keys(cemail_idError).map((key)=>{return <div style={{color :"red"}}>{cemail_idError[key]}</div>})} </div>
-         <div className="form-group"><textarea className="form-control form-control-lg" type="text"  name="about" value={about}   placeholder=" ABOUT"  onChange={(e)=>setAbout(e.target.value)}/><br/></div>
+         <div className="form-group"><textarea className="form-control form-control-lg" type="text"  name="about" value={about}   placeholder=" ABOUT"  onChange={(e)=>setabout(e.target.value)}/><br/></div>
          <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="academic" value={academic}   placeholder="academics "  onChange={(e)=>setAcademic(e.target.value)}/><br/></div>
          <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="accommodation" value={accommodation}   placeholder=" ENTER THE COLLEGE ACCOMANDATIONS "  onChange={(e)=>setAccommodation(e.target.value)}/><br/></div>
          <div className="form-group"><input  className="form-control form-control-lg" type="number"  name="faculty" value={faculty}   placeholder="TOTAL FACULTY IN COLLEGE"  onChange={(e)=>setFaculty(e.target.value)}/><br/></div>
@@ -247,7 +248,7 @@ return(
          <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="average" value={average}   placeholder="AVERAGE GRADE"  onChange={(e)=>setAverage(e.target.value)}/><br/>
          {Object.keys(averageError).map((key)=>{return <div style={{color :"red"}}>{averageError[key]}</div>})}</div>
          <div className="form-group"><input  className="form-control form-control-lg" type="text"  name="affiliated_to" value={affiliated_to}   placeholder=" ENTER THE Affiliated Field "  onChange={(e)=>setAffiliated_to(e.target.value)}/><br/></div>        
-         <div className="form-group">upload verfied certficate of college<input type="file" className="form-control form-control-lg"   name="certificate" value={certificate}   placeholder="select the certificate"  onChange={(e)=>setCertificate(e.target.value)}/><br/></div>
+         <div className="form-group">upload verfied certficate of college<input type="file" className="form-control form-control-lg"   name="certficate" value={certificate}   placeholder="select the certificate"  onChange={(e)=>setCertificate(e.target.value)}/><br/></div>
          {pdfFileError&&<div className='form-control form-control-lg'>{pdfFileError}</div>}
      <div className="pdf-container"></div>
         <br/>
