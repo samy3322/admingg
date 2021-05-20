@@ -183,7 +183,7 @@ async function regi()
     {
        let item={c_name,clocation,caddress,cno1,cno2,cemail_id,about,academic,accommodation,faculty,placement,average,affiliated_to,certificate}
     console.warn(item); 
-    let result=await fetch("http://127.0.0.1:8000/api/collegeadd",{
+    let result=await fetch("http://127.0.0.1:8000/api/clgadd",{
         method:'post',
         body:JSON.stringify(item),
             headers:{
