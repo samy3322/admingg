@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Courseup from './Courseup';
 import Courseup2 from './Courseup2';
 import Delcourse from './Delcourse';
+import Fileup from './Fileup';
+import Blkcmp from './Blkcmp';
+import Unblkcmp from './Unblkcmp';
 
 function App() {
   const lol='hfyhg';
@@ -41,6 +44,15 @@ function App() {
             </Route>
             <Route path="/deletecourse">
               <Delcourse/>
+            </Route>
+            <Route path="/addclg">
+              <Fileup/>
+            </Route>
+            <Route path="/blkcmp">
+              <Blkcmp/>
+            </Route>
+            <Route path="/unblkcmp">
+              <Unblkcmp/>
             </Route>
           </Switch>
         </div>
