@@ -18,11 +18,6 @@ const Courseup2 = () => {
     const [eligibility, seteligibility] = useState(null);
     const [recruitment, setrecruitment] = useState(null);
     const [jobs, setjobs] = useState(null);
-    
-    
-    
-
-    
     useEffect(() => {
         fetch('http://127.0.0.1:8000/api/coursedisplay/'+id)
           .then(res => {
