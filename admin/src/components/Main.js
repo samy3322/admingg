@@ -1,4 +1,4 @@
-import Navbar from './Navbar'
+
 import {BrowserRouter as Router, Switch , Route,Redirect} from 'react-router-dom'
 import Home from './pages/Home';
 import College from './pages/College';
@@ -13,7 +13,7 @@ function Main(){
     
 <div className="left" >
 <Router>
-        <Navbar />
+       
         <Switch>
           
           <Route exact path="/home">

@@ -132,7 +132,7 @@ async function regi()
     })
     result= await result.json()
   console.warn("result",result)
-    alert("User REGISTERD"); 
+    alert("Course Added"); 
    
 }
 }

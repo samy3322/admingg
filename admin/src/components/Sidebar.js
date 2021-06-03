@@ -13,7 +13,7 @@ export const Sidebar = [
   },
   {
     title: 'Course',
-    path: '/View',
+    path: '/Course',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
@@ -30,8 +30,8 @@ export const Sidebar = [
     cName: 'nav-text'
   },
   {
-    title: 'Messages',
-    path: '/messages',
+    title: 'View Course',
+    path: '/View',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },

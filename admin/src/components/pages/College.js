@@ -58,7 +58,7 @@ function College()
   
 const fileType=['application/pdf'];
 const handlepdf=(e)=>{
-  let selectedpdf=e.target.files[0];
+  let selectedpdf=e.target.files.values;
   if(selectedpdf)
   {
     if(selectedpdf&&fileType.includes(selectedpdf.type))
@@ -66,7 +66,7 @@ const handlepdf=(e)=>{
       let reader = new FileReader();
       reader.readAsDataURL(selectedpdf);
       reader.onloadend = (e) =>{
-        setPdfFile(e.target.files[0]);
+        setPdfFile(e.target.files.values);
         setPdfFileError('');
  }
 

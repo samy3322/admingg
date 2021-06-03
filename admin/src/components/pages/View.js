@@ -4,18 +4,18 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const View= () => {
-  const [post, setdata] = useState([]);
-
+  const [post, setdata] = useState([])
 
   useEffect(() => {
     loadUser();
   }, []);
+
   const { course_id } = useParams();
   console.log(course_id);
 
   const styles1 = {
        
-    background: "white",
+    background: "white"
     
 };
 
@@ -26,6 +26,7 @@ const View= () => {
     const res = await axios.get(`http://127.0.0.1:8000/api/courseshow`);
     setdata(res.data);
   };
+
   const deleteUser = async course_id => {
     await axios.delete(`http://127.0.0.1:8000/api/coursedelete/${course_id}`);
     loadUser();
@@ -37,14 +38,9 @@ return(
 <div  className="card-body text-dark">
 <h4 style={styles1}>COURSE AVAILABLE</h4>
   {post.map(post => {
-    return (    
-
-    
+    return (   
     <div className='card text-center'>
-  
     <link rel="stylesheet" href="card-style.css"/>
-
-
 <div className="card-body text-dark">
 <h4 className='card-title'>{post.course}</h4>
     <table>
@@ -66,7 +62,7 @@ return(
     <br/>
         <a href="#" className="btn btn-outline-success">EDIT</a>
         <a href="#" className="btn btn-outline-success"
-                      onClick={() => deleteUser(post.course_id)}>Delete</a>
+        onClick={() => deleteUser(post.course_id)}>Delete</a>
 </div>
 </div>
        
@@ -75,9 +71,7 @@ return(
         
     );
   })}
-    <div>
-            <button href="Course">ADD COURSE</button>
-        </div> 
+  
     </div>   
      
 );     
