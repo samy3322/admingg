@@ -30,6 +30,15 @@ const Delcourse = () => {
           alert("Course Deleted")
     })
     }}
+    if(data != null &&data.length===0)
+    {
+        return(
+            <div className="te">
+                <h1>No Results</h1>
+            </div>
+        );
+
+    }
     return (
         <div className="clist">
       {data && data.map(dat => (
