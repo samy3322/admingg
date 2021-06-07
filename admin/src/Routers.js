@@ -26,6 +26,13 @@ class App extends Component {
         <Route exact path='/Course' component={Course} />
         <Route exact path='/Jobtype' component={Jobtype} />
         <Route exact path='/View' component={View} />
+        <Route path="*">
+              <center>
+              <div className="er"><h1>ohh yay that Route is for Mars......</h1>
+              <h2>Not for your file</h2>
+              <h3>404 NOT FOUND :-(</h3>
+              </div></center>
+            </Route>
         </div>
       </Router>
     );
