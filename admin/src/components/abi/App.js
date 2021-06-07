@@ -54,6 +54,12 @@ function App() {
             <Route path="/unblkcmp">
               <Unblkcmp/>
             </Route>
+            <Route path="*">
+              <div className="er"><h1>ohh yay thats the way to Mars......</h1>
+              <h2>Not for your file</h2>
+              <h3>404 NOT FOUND :-(</h3>
+              </div>
+            </Route>
           </Switch>
         </div>
       </div>
