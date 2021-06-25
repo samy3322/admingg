@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Navbar from './Navbar'
 
 const View= () => {
   const [post, setdata] = useState([])
@@ -34,8 +35,11 @@ const View= () => {
   };
 
 return(
-    
+ 
+    <div>
+      <Navbar/>
 <div  className="card-body text-dark">
+
 <h4 style={styles1}>COURSE AVAILABLE</h4>
   {post.map(post => {
     return (   
@@ -72,7 +76,8 @@ return(
     );
   })}
   
-    </div>   
+    </div>  
+    </div> 
      
 );     
         

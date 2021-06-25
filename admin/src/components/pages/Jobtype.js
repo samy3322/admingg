@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import Select from 'react-select';
 import {Button, Form,Container} from 'react-bootstrap';
+import Navbar from './Navbar'
 
 function Jobtype()
 {
@@ -33,7 +34,8 @@ async function Job()
   
  return(
       
-<div >                
+<div >    
+    <Navbar/>            
     <Container>  
    
     <Form.Group controlId="formBasicName">

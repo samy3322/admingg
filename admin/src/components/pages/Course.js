@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import './Course.css';
 import Select from 'react-select';
 import {Button} from 'react-bootstrap';
+import Navbar from './Navbar'
 
 function Course()
 {
@@ -144,7 +145,7 @@ return(
   
 
 
-
+<Navbar/>
       <div style={styles1}>
        
          <link rel="stylesheet" href="Course.css"/>

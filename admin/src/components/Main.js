@@ -6,16 +6,18 @@ import Products from './pages/Products';
 import Course from './pages/Course';
 import Jobtype from './pages/Jobtype';
 import View from './pages/View';
+import Navbar from './Navbar'
 
 
 function Main(){ 
   return (
     
 <div className="left" >
+<Navbar/>
 <Router>
        
         <Switch>
-          
+   
           <Route exact path="/home">
           <Home />
           </Route>
