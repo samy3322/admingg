@@ -74,6 +74,7 @@ const Menu = () => {
     <Nav className="mr-auto navbar_wrapper">
     </Nav>
   </Navbar>
+
         </div>
     );
 }

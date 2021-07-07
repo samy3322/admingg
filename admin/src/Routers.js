@@ -7,7 +7,9 @@ import Course from './components/pages/Course';
 import Jobtype from './components/pages/Jobtype';
 import View from './components/pages/View';
 import Viewc from './components/pages/Viewc';
-import Main from './components/Main' 
+import Main from './components/Main';
+import Menu from './components/Menu';
+
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
 class App extends Component {
@@ -20,6 +22,7 @@ class App extends Component {
         <div>
         
         <Route exact path="/Left" component={Left} />
+        <Route exact path="/Menu" component={Menu} />
         <Route exact path="/Main" component={Main} />
         <Route exact path='/College' component={College} />
         <Route exact path='/products' component={Products} />
@@ -27,6 +30,7 @@ class App extends Component {
         <Route exact path='/Jobtype' component={Jobtype} />
         <Route exact path='/View' component={View} />
         <Route exact path='/Viewc' component={Viewc} />
+ 
         </div>
       </Router>
     );

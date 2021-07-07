@@ -54,7 +54,7 @@ function College()
     };
     const styles1 = {
        
-      background: "#4169E1",
+      background: "white",
         
     };
   

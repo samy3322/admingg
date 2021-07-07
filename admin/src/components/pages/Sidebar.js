@@ -36,8 +36,8 @@ export const Sidebar = [
     cName: 'nav-text'
   },
   {
-    title: 'Support',
-    path: '/support',
+    title: 'View College',
+    path: '/Viewc',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
   }
