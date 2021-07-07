@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Form,Button, Container} from 'react-bootstrap';
 import Menu from "./Menu"
-
+import ParticleBackground from "./ParticleBackground";
 /*function Reg()
 {
     const[name,setName]=useState("")
@@ -53,7 +53,8 @@ render()
   
  return(
       
-<div >                
+<div >   
+          
 <Menu />
     <Container>  
    

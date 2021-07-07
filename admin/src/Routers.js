@@ -6,7 +6,7 @@ import Products from './components/pages/Products';
 import Course from './components/pages/Course';
 import Jobtype from './components/pages/Jobtype';
 import View from './components/pages/View';
-import Navbar from './components/Navbar'
+import Viewc from './components/pages/Viewc';
 import Main from './components/Main' 
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
@@ -26,6 +26,7 @@ class App extends Component {
         <Route exact path='/Course' component={Course} />
         <Route exact path='/Jobtype' component={Jobtype} />
         <Route exact path='/View' component={View} />
+        <Route exact path='/Viewc' component={Viewc} />
         </div>
       </Router>
     );

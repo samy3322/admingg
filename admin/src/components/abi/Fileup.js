@@ -50,7 +50,6 @@ const Fileup = () => {
     };//handle click
    const handleChange=(e)=>
    {
-    
     setcertificate(e[0]);
     console.log(certificate);
     

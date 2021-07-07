@@ -3,6 +3,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from './Navbar'
+import Courseup2 from '../abi/Courseup2';
+import '../pages/card-style.css';
 
 const View= () => {
   const [post, setdata] = useState([])
@@ -40,15 +42,15 @@ return(
       <Navbar/>
 <div  className="card-body text-dark">
 
-<h4 style={styles1}>COURSE AVAILABLE</h4>
   {post.map(post => {
     return (   
     <div className='card text-center'>
     <link rel="stylesheet" href="card-style.css"/>
 <div className="card-body text-dark">
 <h4 className='card-title'>{post.course}</h4>
+
     <table>
-       
+ 
 <tr>
   <td>STREAM<p className='card-text text-secondary'>{post.stream}</p></td>
   <td>AFTER<p className='card-text text-secondary'>{post.after}</p></td>
@@ -60,13 +62,14 @@ return(
     <td>EXAM_TYPE  <p className='card-text text-secondary'>{post.exam_type}</p></td>
      <td>ELIGIBILITY <p className='card-text text-secondary'>{post.eligibility}</p></td>
     <td>RECURITEMENT<p className='card-text text-secondary'>{post.recruitment}</p></td>
-    <td>JOBS<p className='card-text text-secondary'>{post.jobs}</p></td>
-   <td> FEES<p className='card-text text-secondary'>{post.fees}</p></td></tr>
+    <td>JOBS<p className='card-text text-secondary'>{post.jobs}</p></td></tr>
     </table>
     <br/>
-        <a href="#" className="btn btn-outline-success">EDIT</a>
+        <a href="#" className="btn btn-outline-success" onClick={() => <Courseup2/> } >EDIT</a>
         <a href="#" className="btn btn-outline-success"
         onClick={() => deleteUser(post.course_id)}>Delete</a>
+         
+
 </div>
 </div>
        

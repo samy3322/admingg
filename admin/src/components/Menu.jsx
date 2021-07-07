@@ -72,8 +72,6 @@ const Menu = () => {
         <Navbar bg="dark" variant="dark">
     <Navbar.Brand>Amitech</Navbar.Brand>
     <Nav className="mr-auto navbar_wrapper">
-        <Link to="/Left">Log out</Link>
-        
     </Nav>
   </Navbar>
         </div>
