@@ -70,7 +70,7 @@ const Courseup2 = () => {
     }
     return (
      
-        <div className="update">
+        <div id ="Courseup2"className="update">
            {ispending && <div className="pending">
         Loading....
       </div>}

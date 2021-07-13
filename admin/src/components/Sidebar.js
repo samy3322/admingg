@@ -40,6 +40,12 @@ export const Sidebar = [
     path: '/Viewc',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
+  },  
+  {
+    title: 'Block College',
+    path: '/Blkclg',
+    icon: <IoIcons.IoMdHelpCircle />,
+    cName: 'nav-text'
   }
 ];
 

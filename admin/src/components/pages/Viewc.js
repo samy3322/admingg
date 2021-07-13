@@ -1,4 +1,4 @@
-//import './card-style.css';
+import './card-style.css';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -25,12 +25,12 @@ const Viewc= () => {
   // api/getjob/{id}
 
   const loadUser = async () => {
-    const res = await axios.get(`http://127.0.0.1:8000/api/clgshow`);
+    const res = await axios.get(`http://127.0.0.1:8000/api/showclg`);
     setdata(res.data);
   };
 
   const deleteUser = async college_id => {
-    await axios.delete(`http://127.0.0.1:8000/api/coursedelete/${college_id}`);
+    await axios.delete(`http://127.0.0.1:8000/api/removeclg/${college_id}`);
     loadUser();
     console.warn("delete",deleteUser)
   };

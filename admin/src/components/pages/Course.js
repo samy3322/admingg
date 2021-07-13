@@ -165,16 +165,16 @@ return(
       //value={after} // set selected value
       options={data} // set list of the data
       onChange={handleChange} // assign onChange function 
-    />after
+    />
 
-    {after && <div style={{ marginTop: 20, lineHeight: '25px' }}>
+    {after && <div style={{ marginTop: 10, lineHeight: '25px' }}>
       <b>Selected Option</b><br />
       <div style={{ marginTop: 10 }}> </div> 
   
     </div>}
     </div>
-
-    <div className="form-group"> <label htmlFor='duration'>duration</label> <input  className="form-control form-control-lg" type="text" name="duration"  value={duration} placeholder="duration" onChange={(e)=>setDuration(e.target.value)} /><br/></div>
+<br></br>
+    <div className="form-group"> <label htmlFor='duration'></label> <input  className="form-control form-control-lg" type="text" name="duration"  value={duration} placeholder="duration" onChange={(e)=>setDuration(e.target.value)} /><br/></div>
     <div className="form-group">  <input  className="form-control form-control-lg" type="text" name="type"  value={type} placeholder="type of course"onChange={(e)=>setType(e.target.value)}/></div>
     <div className="form-group"><textarea  className="form-control form-control-lg" type="text"  name="about" value={about}   placeholder="about the course"  onChange={(e)=>setAbout(e.target.value)}/><br/></div>
     <div className="form-group"><input className="form-control form-control-lg" type="text"  name="exam_type" value={exam_type}   placeholder="type of exam for course"  onChange={(e)=>setExam_type(e.target.value)}/><br/></div>

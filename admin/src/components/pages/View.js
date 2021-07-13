@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Navbar from './Navbar'
-import Courseup2 from '../abi/Courseup2';
+import Editcourse from './Editcourse';
 import '../pages/card-style.css';
 
 const View= () => {
@@ -65,7 +65,7 @@ return(
     <td>JOBS<p className='card-text text-secondary'>{post.jobs}</p></td></tr>
     </table>
     <br/>
-        <a href="#" className="btn btn-outline-success" onClick={() => <Courseup2/> } >EDIT</a>
+        <a href="Courseup2" className="btn btn-outline-success">EDIT</a>
         <a href="#" className="btn btn-outline-success"
         onClick={() => deleteUser(post.course_id)}>Delete</a>
          

@@ -9,6 +9,8 @@ import View from './components/pages/View';
 import Viewc from './components/pages/Viewc';
 import Main from './components/Main';
 import Menu from './components/Menu';
+import Courseup2 from './components/pages/Courseup2';
+import Blkclg from './components/pages/Blkclg';
 
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
@@ -30,6 +32,9 @@ class App extends Component {
         <Route exact path='/Jobtype' component={Jobtype} />
         <Route exact path='/View' component={View} />
         <Route exact path='/Viewc' component={Viewc} />
+        <Route exact path='/Courseup2' component={Courseup2} />
+        <Route exact path='/Blkclg' component={Blkclg} />
+
  
         </div>
       </Router>

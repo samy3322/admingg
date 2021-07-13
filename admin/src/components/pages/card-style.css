@@ -3,12 +3,13 @@
 {
 justify-content: right;
 width: 50rem;
-margin-left: 250px;
+margin-left: 350px;
 border-color:darkslategray;
 border-radius: 10px;
 background-color:ivory;
 padding-bottom: 10px;
 border-width: 2px;
+margin-bottom: 10px;
 }
 
 
@@ -26,7 +27,8 @@ padding-top: 10rem;
     transform: scale(1);
 }
 .card-img-top:hover{
-    transform: scale(1);                                                
+    transform: scale(1);      
+    color:#546cbe;                                          
 }    
 .a{
   margin-left: 20px;
@@ -36,7 +38,7 @@ padding-top: 10rem;
     padding-left:60px;
 }
 .table,tr,td,p{
-    color:green;
+    color:#546cbe;
 }
 .h4{
     color:indigo;
